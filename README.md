@@ -86,7 +86,7 @@ Multi-noding (Sharing CPU, RAM, Uplink or storage among nodes) is not allowed.**
    - By default, the Saturn volume is mounted from `$HOME`. It can be changed by setting the `$SATURN_HOME` environment variable.
 
    ```bash
-   curl -s https://raw.githubusercontent.com/filecoin-saturn/L1-node/main/.env -o .env
+   curl -s https://raw.githubusercontent.com/eringerli/L1-node/main/.env -o .env
    ```
 
    You can use the text editor of your choice (e.g. `nano` or `vim` on Linux)
@@ -94,13 +94,13 @@ Multi-noding (Sharing CPU, RAM, Uplink or storage among nodes) is not allowed.**
 4. Download the `docker-compose.yml` file:
 
    ```bash
-   curl -s https://raw.githubusercontent.com/filecoin-saturn/L1-node/main/docker-compose.yml -o docker-compose.yml
+   curl -s https://raw.githubusercontent.com/eringerli/L1-node/main/docker-compose.yml -o docker-compose.yml
    ```
 
 5. Download the `docker_compose_update.sh` script and make it executable:
 
    ```bash
-   curl -s https://raw.githubusercontent.com/filecoin-saturn/L1-node/main/docker_compose_update.sh -o docker_compose_update.sh
+   curl -s https://raw.githubusercontent.com/eringerli/L1-node/main/docker_compose_update.sh -o docker_compose_update.sh
    chmod +x docker_compose_update.sh
    ```
 
