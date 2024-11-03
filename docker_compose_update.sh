@@ -5,7 +5,7 @@ set -ex
 
 env="$1"
 
-tags="$(curl -fs https://api.github.com/repos/filecoin-saturn/l1-node/tags | grep name | cut -f2 -d ':' | tr -d ',' | tr -d '\"' | tr -d ' ')"
+tags="$(curl -fs https://api.github.com/repos/eringerli/l1-node/tags | grep name | cut -f2 -d ':' | tr -d ',' | tr -d '\"' | tr -d ' ')"
 
 # default to main net
 ref="$(echo "$tags" | grep "^[[:digit:]]" | head -n1)"
@@ -15,7 +15,7 @@ elif [ "$env" = "canary" ]; then
     ref="$(echo "$tags" | grep "canary-" | head -n1)"
 fi
 
-repo="https://raw.githubusercontent.com/filecoin-saturn/L1-node/$ref"
+repo="https://raw.githubusercontent.com/eringerli/L1-node/$ref"
 
 curl -Lfs "$repo/docker_compose_update.sh" -o docker_compose_update.sh
 
