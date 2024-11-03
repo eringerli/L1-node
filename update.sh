@@ -19,7 +19,7 @@ echo "The run script was deprecated too. To start or stop your node use 'docker 
 if [ -f "$compose_file" ]; then
     echo "We have migrated to a docker compose setup to reduce risks caused by these update and run scripts. You can delete these scripts and use the Docker Compose workflow now."
 else 
-  wget -O "$compose_file" -T 10 -t 3 "https://raw.githubusercontent.com/filecoin-saturn/L1-node/main/docker-compose.yml"
+  wget -O "$compose_file" -T 10 -t 3 "https://raw.githubusercontent.com/eringerli/L1-node/main/docker-compose.yml"
   if [[ -s "$compose_file" ]];
   then
     echo "Downloaded the docker compose file successfully!"
@@ -28,7 +28,7 @@ else
     exit 1
   fi
 
-  wget -O "$env_file" -T 10 -t 3 "https://raw.githubusercontent.com/filecoin-saturn/L1-node/main/.env"
+  wget -O "$env_file" -T 10 -t 3 "https://raw.githubusercontent.com/eringerli/L1-node/main/.env"
   if [[ -s "$env_file" ]];
   then
     echo "Downloaded the .env file successfully!"
