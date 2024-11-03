@@ -2,7 +2,7 @@ version: "3.7"
 services:
   saturn-node:
     init: true
-    image: ghcr.io/filecoin-saturn/l1-node:${SATURN_NETWORK:-test}
+    image: ghcr.io/eringerli/l1-node:${SATURN_NETWORK:-test}
     container_name: saturn-node
     restart: unless-stopped
     environment:
